@@ -1,0 +1,34 @@
+pipeline {
+ agent {
+  label 'master'
+ }
+
+ parameters {
+   string(defaultValue: 'abc', description: 'parameters.', name: 'paramName')
+ }
+
+ stages {
+  stage('Test API with plugin httpRequest') {
+   steps {
+
+    println "[INFO]...........................................................................................\
+           \n[INFO].. Pipeline for automating build of calculator miscroservice..\
+           \n[INFO]..........................................................................................."
+
+    script {
+           println params.paramName
+           }
+    }
+   }
+  }
+
+
+ } //end stages
+
+ post {
+   cleanup {
+       cleanWs()
+   }
+ }
+
+} //end pipeline
