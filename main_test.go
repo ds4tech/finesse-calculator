@@ -18,7 +18,7 @@ func TestQuz(t *testing.T) {
 	if result != "bar" {
 		t.Errorf("expecting bar, got %s", result)
 	}
-	result := Quz("qux")
+	result = Quz("qux")
 	if result != "INVALID" {
 		t.Errorf("expecting INVALID, got %s", result)
 	}
