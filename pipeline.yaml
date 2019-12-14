@@ -8,7 +8,7 @@ pipeline {
  }
 
  stages {
-  stage('Test API with plugin httpRequest') {
+  stage('Build') {
    steps {
 
     println "[INFO]...........................................................................................\
@@ -20,8 +20,8 @@ pipeline {
            }
     }
    }
-  }
-  stage('Test API with plugin httpRequest') {
+
+  stage('Run Unit tests') {
    steps {
 
     println "[INFO]...........................................................................................\
@@ -33,7 +33,7 @@ pipeline {
            }
     }
    }
-  }
+
 
  } //end stages
 
