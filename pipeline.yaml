@@ -34,6 +34,18 @@ pipeline {
     }
    }
 
+  stage('Push to articaftory') {
+   steps {
+
+    println "[INFO]...........................................................................................\
+           \n[INFO].. Pipeline for automating build of calculator miscroservice..\
+           \n[INFO]..........................................................................................."
+
+    script {
+           println params.paramName
+           }
+    }
+   }
 
  } //end stages
 
