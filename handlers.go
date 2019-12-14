@@ -91,11 +91,19 @@ func isPrimeHandler(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		fmt.Fprintf(w, "Kindly enter integer number")
 	}
-  json.Unmarshal(reqBody, &dat)
+
+	if err := json.Unmarshal(reqBody, &dat); err != nil {
+			w.Header().Set("content-Type", "application/json; charset=UTF-8")
+			w.WriteHeader(http.StatusOK)
+			panic(err)
+			if err := json.NewEncoder(w).Encode(err); err != nil {
+				panic(err)
+			}
+		}
   num := dat["number"].(string)
 
-  i, err := strconv.ParseInt(num, 10, 64)
-  result := calc.IsPrime(int(i))
+  i, err := strconv.Atoi(num)
+  result := calc.IsPrime(i)
 	if err == nil {
     jsonMap := map[string]bool{"isPrime": result}
     jsonResult, _ := json.Marshal(jsonMap)
