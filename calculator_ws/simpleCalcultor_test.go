@@ -6,7 +6,7 @@ import (
 
 func TestSum(t *testing.T) {
   result := Sum(int64(3), int64(4))
-  expecting := int64(8)
+  expecting := int64(7)
   if result != expecting {
 		t.Errorf("expecting %d, got %d", expecting, result)
   }

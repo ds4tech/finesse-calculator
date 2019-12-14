@@ -39,7 +39,7 @@ pipeline {
       println "[INFO]..........Push to articaftory.............."
 
       script {
-             sh 'set -x; tar -cvf comp.tar *; ls'
+             sh 'set -x; tar -cvf comp.tar.gz ${env.JOB_NAME}; ls'
              }
       }
      }
