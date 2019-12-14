@@ -30,7 +30,7 @@ pipeline {
       steps {
         println "[INFO]..........Unit tests.............."
         script {
-          dir("internal") {
+          dir("pkg") {
                sh 'set -x; go test'
           }
         }
