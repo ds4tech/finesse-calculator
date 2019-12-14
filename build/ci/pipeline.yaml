@@ -21,7 +21,7 @@ pipeline {
       steps {
         println "[INFO]..........Build.............."
         script {
-             sh "set -x; go build cmd/calculator/* -o ${project_name};"
+             sh "set -x; go build -o ${project_name} cmd/calculator/*;"
         }
       }
      }

@@ -7,7 +7,7 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	"github.com/ds4tech/pipeline-calculator-ws/internal"
+	"github.com/ds4tech/pipeline-calculator-ws/pkg"
 )
 var dat map[string]interface{}
 
