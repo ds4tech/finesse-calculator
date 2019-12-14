@@ -5,7 +5,7 @@ import (
 	"math/big"
 )
 
-func Sum(x int, y int) int {
+func Sum(x int64, y int64) int64 {
   return x+y
 }
 
@@ -26,7 +26,7 @@ func IsPrime(n int) (result bool) {
     if big.NewInt(int64(i)).ProbablyPrime(20) {
       result = true
     } else {
-      result = false 
+      result = false
     }
   }
   return result
@@ -36,4 +36,3 @@ func Log(n float64) (result float64) {
   result = math.Log(n)
   return result
 }
-
