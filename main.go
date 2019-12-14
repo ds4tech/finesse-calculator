@@ -19,5 +19,5 @@ func main() {
 	router.HandleFunc("/log", logHandler).Methods("POST")
 	router.HandleFunc("/factorial", factorialHandler).Methods("POST")
 	router.HandleFunc("/isPrime", isPrimeHandler).Methods("POST")
-	log.Fatal(http.ListenAndServe(":8080", router))
+	log.Fatal(http.ListenAndServe(":8888", router))
 }

@@ -21,7 +21,19 @@ pipeline {
     }
    }
   }
+  stage('Test API with plugin httpRequest') {
+   steps {
 
+    println "[INFO]...........................................................................................\
+           \n[INFO].. Pipeline for automating build of calculator miscroservice..\
+           \n[INFO]..........................................................................................."
+
+    script {
+           println params.paramName
+           }
+    }
+   }
+  }
 
  } //end stages
 
