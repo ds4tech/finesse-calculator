@@ -18,22 +18,24 @@ pipeline {
     }
 
     stage('Build') {
-     steps {
-
-      println "[INFO]..........Build.............."
-      script {
-             sh "set -x; go build -o ${project_name};"
-             }
+      steps {
+        println "[INFO]..........Build.............."
+        script {
+          dir("cmd/calculator") {
+               sh "set -x; go build -o ${project_name};"
+          }
+        }
       }
      }
 
     stage('Run Unit tests') {
-     steps {
-
-      println "[INFO]..........Unit tests.............."
-      script {
-             sh 'set -x; cd calculator_ws; go test'
-             }
+      steps {
+        println "[INFO]..........Unit tests.............."
+        script {
+          dir("cmd/calculator") {
+               sh 'set -x; cd calculator_ws; go test'
+          }
+        }
       }
      }
 
