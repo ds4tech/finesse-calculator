@@ -5,8 +5,8 @@ import (
 )
 
 func TestSum(t *testing.T) {
-  result := Sum(int(3), int(4))
-  expecting := 8
+  result := Sum(int64(3), int64(4))
+  expecting := int64(8)
   if result != expecting {
 		t.Errorf("expecting %d, got %d", expecting, result)
   }
@@ -17,7 +17,7 @@ func TestSqrt(t *testing.T) {
   if result != expecting {
 		t.Errorf("expecting %v, got %v", expecting, result)
   }
-  result = Sqrt(-4)
+  result = Sqrt(4)
   expecting = 2
   if result != expecting {
 		t.Errorf("expecting %v, got %v", expecting, result)

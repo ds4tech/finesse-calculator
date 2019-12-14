@@ -8,44 +8,45 @@ pipeline {
  }
 
  stages {
-  stage('Build') {
-   steps {
 
-    println "[INFO]...........................................................................................\
-           \n[INFO].. Pipeline for automating build of calculator miscroservice..\
-           \n[INFO]..........................................................................................."
-
-    script {
-           println params.paramName
-           }
+   stage('Checkout code from SCM') {
+    steps {
+     println "[INFO]...........................................................................................\
+            \n[INFO].. Pipeline for automating build of calculator miscroservice..\
+            \n[INFO]..........................................................................................."
+     git([url: 'https://github.com/ds4tech/pipeline-calculator-ws.git', branch: 'master'])
+     }
     }
-   }
+    stage('Build') {
+     steps {
 
-  stage('Run Unit tests') {
-   steps {
+      println "[INFO]..........Build.............."
+      script {
+             sh 'set -x; go build -o calcWs; ls'
+             }
+      }
+     }
 
-    println "[INFO]...........................................................................................\
-           \n[INFO].. Pipeline for automating build of calculator miscroservice..\
-           \n[INFO]..........................................................................................."
+    stage('Run Unit tests') {
+     steps {
 
-    script {
-           println params.paramName
-           }
-    }
-   }
+      println "[INFO]..........Unit tests.............."
+      script {
+             sh 'set -x; cd calculator_ws; go test'
+             }
+      }
+     }
 
-  stage('Push to articaftory') {
-   steps {
+    stage('Push to articaftory') {
+     steps {
 
-    println "[INFO]...........................................................................................\
-           \n[INFO].. Pipeline for automating build of calculator miscroservice..\
-           \n[INFO]..........................................................................................."
+      println "[INFO]..........Push to articaftory.............."
 
-    script {
-           println params.paramName
-           }
-    }
-   }
+      script {
+             sh 'set -x; tar -cvf comp.tar *; ls'
+             }
+      }
+     }
 
  } //end stages
 
