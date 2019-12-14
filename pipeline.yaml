@@ -3,10 +3,6 @@ pipeline {
   label 'master'
  }
 
- parameters {
-   string(defaultValue: 'abc', description: 'parameters.', name: 'paramName')
- }
-
  stages {
 
    stage('Checkout code from SCM') {
