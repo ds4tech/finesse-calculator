@@ -2,3 +2,8 @@ tmp
 calcWs
 pipeline-calculator-ws
 calculator_ws/calculator_ws
+deployments/aws/.terraform.tfstate.lock.info
+deployments/aws/.terraform/
+deployments/aws/mykey
+deployments/aws/mykey.pub
+deployments/aws/terraform.tfstate
