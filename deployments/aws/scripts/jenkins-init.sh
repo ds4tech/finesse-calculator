@@ -4,7 +4,7 @@
 vgchange -ay
 
 DEVICE_FS=`blkid -o value -s TYPE ${DEVICE}`
-if [ "`echo -n $DEVICE_FS`" == "" ] ; then 
+if [ "`echo -n $DEVICE_FS`" == "" ] ; then
   # wait for the device to be attached
   DEVICENAME=`echo "${DEVICE}" | awk -F '/' '{print $3}'`
   DEVICEEXISTS=''
@@ -30,6 +30,9 @@ echo "deb http://pkg.jenkins.io/debian-stable binary/" >> /etc/apt/sources.list
 apt-get update
 
 # install dependencies
+apt-get install -y golang
+export GOPATH=/var/lib/jenkins/go
+
 apt-get install -y python3 openjdk-8-jre
 update-java-alternatives --set java-1.8.0-openjdk-amd64
 # install jenkins

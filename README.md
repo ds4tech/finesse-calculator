@@ -21,4 +21,4 @@ http://localhost/
 
 kubectl create -f k8s-replicaSet.yml
 
-http://192.168.99.100:31898/
+http://192.168.99.100:30000/
