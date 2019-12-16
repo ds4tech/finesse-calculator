@@ -2,6 +2,8 @@
 
 1. [Introduction](#intro) 
 2. [Run](#run) 
+2.1 [Exec](#run.exe) 
+2.1 [Docker](#run.docker) 
 3. [Deploy](#deploy) 
 4. [Usage](#usage) 
 5. [Continous Integration](#ci) 
@@ -18,7 +20,7 @@ Simple Go Calculator project with some math function:<a name="intro"></a>
 
 ## RUN as exec or docker container <a name="run"></a>
 
-**Executable**
+**Executable** <a name="run.exe"></a>
 ```
 go build -o main cmd/calculator/handlers.go cmd/calculator/main.go
 ./main
@@ -26,7 +28,7 @@ go build -o main cmd/calculator/handlers.go cmd/calculator/main.go
 http://localhost:8888/
 ```
 
-**Docker image**
+**Docker container** <a name="run.docker"></a>
 ```
 docker build -t go-calc -f build/package/Dockerfile .
 docker run -d -p 80:8888 go-calc
