@@ -14,10 +14,12 @@ Function IsPrime returns bool, according to provided number (is it prime or not)
 - http://localhost:8888/sum
 - JSON: {"num1":"2","num2":"4"}
 - curl: 
-```curl --location --request POST "http://localhost:8888/sum" \
+```
+curl --location --request POST "http://localhost:8888/sum" \
 --header "Content-Type: application/json" \
 --data "{\"num1\":\"2\",
-\"num2\":\"4\"}"```
+\"num2\":\"4\"}"
+```
 
 ## RUN
 
