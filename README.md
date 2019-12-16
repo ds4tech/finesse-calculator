@@ -1,12 +1,12 @@
 # assignment for interview
 
 1. [Introduction](#intro) 
-2. [Run](#run) <br>
-   2.1. [Exec](#run.exe) <br>
-   2.2. [Docker](#run.docker) 
+2. [Run](#build) <br>
+   2.1. [Exec](#build.exe) <br>
+   2.2. [Docker](#build.docker) 
 3. [Deploy](#deploy) <br>
  3.1. [Kubernetes](#deploy.k8s) <br>
- 3.2. [AWS ECS](#deploy.ecs) <br>
+ 3.2. [AWS ECS](#deploy.ecs)
 4. [Usage](#usage) 
 5. [Continous Integration](#ci) 
 
@@ -20,9 +20,9 @@ Simple Go Calculator project with some math function:<a name="intro"></a>
 - IsPrime
 - Log
 
-## RUN as exec or docker container <a name="run"></a>
+## BUILD as exec or docker container <a name="build"></a>
 
-**Executable** <a name="run.exe"></a>
+**Executable** <a name="build.exe"></a>
 ```
 go build -o main cmd/calculator/handlers.go cmd/calculator/main.go
 ./main
@@ -30,7 +30,7 @@ go build -o main cmd/calculator/handlers.go cmd/calculator/main.go
 http://localhost:8888/
 ```
 
-**Docker container** <a name="run.docker"></a>
+**Docker container** <a name="build.docker"></a>
 ```
 docker build -t go-calc -f build/package/Dockerfile .
 docker run -d -p 80:8888 go-calc
