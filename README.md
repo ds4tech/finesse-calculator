@@ -2,7 +2,7 @@
 
 Simple Go Calculator project.
 
-***RUN***
+##RUN
 
 Executable:
 ```
@@ -20,7 +20,7 @@ docker run -d -p 80:8888 go-calc
 http://localhost/
 ```
 
-**DEPLOY**
+##DEPLOY
 
 Kubernetes
 ```
