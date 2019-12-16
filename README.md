@@ -2,8 +2,8 @@
 
 1. [Introduction](#intro) 
 2. [Run](#run) 
- 2.1. [Exec](#run.exe) 
- 2.2. [Docker](#run.docker) 
+   2.1. [Exec](#run.exe) 
+   2.2. [Docker](#run.docker) 
 3. [Deploy](#deploy) 
  - [Kubernetes](#deploy.k8s) 
  - [AWS ECS](#deploy.ecs) 
