@@ -4,7 +4,7 @@ Simple Go Calculator project.
 
 ## RUN
 
-Executable:
+**Executable**
 ```
 go build -o main cmd/calculator/handlers.go cmd/calculator/main.go
 ./main
@@ -12,7 +12,7 @@ go build -o main cmd/calculator/handlers.go cmd/calculator/main.go
 http://localhost:8888/
 ```
 
-Docker image
+**Docker image**
 ```
 docker build -t go-calc -f build/package/Dockerfile .
 docker run -d -p 80:8888 go-calc
@@ -22,7 +22,7 @@ http://localhost/
 
 ## DEPLOY
 
-Kubernetes
+**Kubernetes**
 ```
 kubectl create -f deployments/kubernetes/k8s-replicaSet.yml
 
