@@ -2,9 +2,11 @@
 
 1. [Introduction](#intro) 
 2. [Run](#run) 
-2.1 [Exec](#run.exe) 
-2.1 [Docker](#run.docker) 
+2.1. [Exec](#run.exe) 
+2.1. [Docker](#run.docker) 
 3. [Deploy](#deploy) 
+3.1. [Kubernetes](#deploy.k8s) 
+3.1. [AWS ECS](#deploy.ecs) 
 4. [Usage](#usage) 
 5. [Continous Integration](#ci) 
 
@@ -38,14 +40,14 @@ http://localhost/
 
 ## DEPLOY <a name="deploy"></a> 
 
-**Kubernetes**
+**Kubernetes** <a name="deploy.k8s"></a>
 ```
 kubectl create -f deployments/kubernetes/k8s-replicaSet.yml
 
 http://192.168.99.100:30000/
 ```
 
-**AWS ECS:**
+**AWS ECS:** <a name="deploy.ecs"></a>
 ```
 cd deployments/aws/ecs
 terraform init
