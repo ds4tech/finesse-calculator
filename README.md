@@ -115,3 +115,5 @@ curl --location --request POST "http://localhost:8888/log" \
 ```
 ## Continous Integration <a name="ci"></a> 
 Pipeline script written in Groovy is placed [build/ci directory](https://github.com/ds4tech/pipeline-calculator-ws/blob/master/build/ci/pipeline.yaml)
+It is dedicated for Jenkins Pipeline JOB.
+To run Jenkins on AWS, run terraform scripts in deployments/aws/jenkins-ec2_instance
