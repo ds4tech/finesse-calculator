@@ -7,6 +7,8 @@
 5. [Continous Integration](#ci) 
 
 
+## Introduction <a name="intro"></a>
+
 Simple Go Calculator project with some math function:<a name="intro"></a> 
 - Sum
 - Sqrt
@@ -14,7 +16,7 @@ Simple Go Calculator project with some math function:<a name="intro"></a>
 - IsPrime
 - Log
 
-## RUN as exec or docker container <a name="run"></a> 
+## RUN as exec or docker container <a name="run"></a>
 
 **Executable**
 ```
@@ -107,3 +109,4 @@ curl --location --request POST "http://localhost:8888/log" \
 --header "Content-Type: application/json" \
 --data "{\"number\":\"6\"}"
 ```
+## Continous Integration <a name="ci"></a> 
