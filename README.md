@@ -1,14 +1,23 @@
 # assignment for interview
 
 Simple Go Calculator project with some math function:
-- Sum(x int64, y int64)
+- Sum
 - Sqrt(x float64)
 - Factorial(n uint64)
 - IsPrime(n int)
 - Log(n float64)
 
 Function IsPrime returns bool, according to provided number (is it prime or not).
-
+**Use:**
+1.SUM 
+- (x int64, y int64)
+- http://localhost:8888/sum
+- JSON: {"num1":"2","num2":"4"}
+- curl: 
+```curl --location --request POST "http://localhost:8888/sum" \
+--header "Content-Type: application/json" \
+--data "{\"num1\":\"2\",
+\"num2\":\"4\"}"```
 
 ## RUN
 
