@@ -5,8 +5,8 @@
  2.1. [Exec](#run.exe) 
  2.2. [Docker](#run.docker) 
 3. [Deploy](#deploy) 
- 3.1. [Kubernetes](#deploy.k8s) 
- 3.2. [AWS ECS](#deploy.ecs) 
+ - [Kubernetes](#deploy.k8s) 
+ - [AWS ECS](#deploy.ecs) 
 4. [Usage](#usage) 
 5. [Continous Integration](#ci) 
 
