@@ -114,3 +114,4 @@ curl --location --request POST "http://localhost:8888/log" \
 --data "{\"number\":\"6\"}"
 ```
 ## Continous Integration <a name="ci"></a> 
+Pipeline script written in Groovy is placed [build/ci directory](https://github.com/ds4tech/pipeline-calculator-ws/blob/master/build/ci/pipeline.yaml)
