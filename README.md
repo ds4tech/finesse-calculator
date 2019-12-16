@@ -7,7 +7,12 @@ Simple Go Calculator project with some math function:
 - IsPrime
 - Log
 
-## RUN as exec or docker container
+1. [Run](#run) 
+2. [Deploy](#deploy) 
+3. [Usage](#usage) 
+4. [Continous Integration](#ci) 
+
+## RUN as exec or docker container <a name="run"></a> 
 
 **Executable**
 ```
@@ -25,7 +30,7 @@ docker run -d -p 80:8888 go-calc
 http://localhost/
 ```
 
-## DEPLOY
+## DEPLOY <a name="deploy"></a> 
 
 **Kubernetes**
 ```
@@ -46,7 +51,7 @@ docker build -t 311744426619.dkr.ecr.eu-west-1.amazonaws.com/go-calc:0.0.3 -f bu
 docker push 311744426619.dkr.ecr.eu-west-1.amazonaws.com/go-calc:0.0.3
 ```
 
-## USEAGE
+## USEAGE <a name="usage"></a> 
 
 1. SUM 
 - (x int64, y int64)
