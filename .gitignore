@@ -6,8 +6,8 @@ deployments/aws/jenkins-ec2_instance/terraform.tfstate
 deployments/aws/jenkins-ec2_instance/terraform.tfstate.backup
 deployments/aws/jenkins-ec2_instance/.terraform/
 deployments/aws/jenkins-ec2_instance/.terraform.tfstate.lock.info
-deployments/aws/jenkins-ec2_instancemykey
-deployments/aws/jenkins-ec2_instancemykey.pub
+deployments/aws/jenkins-ec2_instance/mykey
+deployments/aws/jenkins-ec2_instance/mykey.pub
 deployments/aws/ecs/terraform.tfstate
 deployments/aws/ecs/terraform.tfstate.backup
 deployments/aws/ecs/.terraform/
