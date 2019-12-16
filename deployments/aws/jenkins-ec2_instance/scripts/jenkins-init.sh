@@ -29,12 +29,17 @@ wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key 
 echo "deb http://pkg.jenkins.io/debian-stable binary/" >> /etc/apt/sources.list
 apt-get update
 
-# install dependencies
+# install go lang
 apt-get install -y golang
+mkdir /var/lib/jenkins/go
 export GOPATH=/var/lib/jenkins/go
+go get github.com/gorilla/mux
+go get github.com/ds4tech/pipeline-calculator-ws/pkg
 
+# install dependencies
 apt-get install -y python3 openjdk-8-jre
 update-java-alternatives --set java-1.8.0-openjdk-amd64
+
 # install jenkins
 apt-get install -y jenkins=${JENKINS_VERSION} unzip
 
