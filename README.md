@@ -1,10 +1,10 @@
 # assignment for interview
 
 1. [Introduction](#intro) 
-2. [Run](#run) 
+2. [Run](#run) <br>
    2.1. [Exec](#run.exe) <br>
-   2.2. [Docker](#run.docker) <br> 
-3. [Deploy](#deploy) 
+   2.2. [Docker](#run.docker) 
+3. [Deploy](#deploy) <br>
  3.1. [Kubernetes](#deploy.k8s) <br>
  3.2. [AWS ECS](#deploy.ecs) <br>
 4. [Usage](#usage) 
