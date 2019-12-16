@@ -3,13 +3,13 @@
 Simple Go Calculator project with some math function:
 - Sum
 - Sqrt
-- Factorial(n uint64)
-- IsPrime(n int)
-- Log(n float64)
+- Factorial
+- IsPrime
+- Log
 
 Function IsPrime returns bool, according to provided number (is it prime or not).
 
-**Useage:**
+## USEAGE
 
 1.SUM 
 - (x int64, y int64)
@@ -29,9 +29,41 @@ curl --location --request POST "http://localhost:8888/sum" \
 - JSON: {"number":"144"}
 - curl: 
 ```
-curl --location --request POST "http://localhost:8888/sum" \
+curl --location --request POST "http://localhost:8888/sqrt" \
 --header "Content-Type: application/json" \
 --data "{\"number\":\"144\"}"
+```
+
+3.FACTORIAL 
+- (n uint64)
+- http://localhost:8888/factorial
+- JSON: {"number":"6"}
+- curl: 
+```
+curl --location --request POST "http://localhost:8888/factorial" \
+--header "Content-Type: application/json" \
+--data "{\"number\":\"6\"}"
+```
+4.ISPRIME 
+- (n int)
+- http://localhost:8888/isPrime
+- JSON: {"number":"6"}
+- curl: 
+```
+curl --location --request POST "http://localhost:8888/isPrime" \
+--header "Content-Type: application/json" \
+--data "{\"number\":\"6\"}"
+```
+
+5.LOG 
+- (n float64)
+- http://localhost:8888/log
+- JSON: {"number":"6"}
+- curl: 
+```
+curl --location --request POST "http://localhost:8888/log" \
+--header "Content-Type: application/json" \
+--data "{\"number\":\"6\"}"
 ```
 
 ## RUN
