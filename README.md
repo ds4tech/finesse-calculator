@@ -2,7 +2,7 @@
 
 Simple Go Calculator project.
 
-RUN
+***RUN***
 
 Executable:
 ```
@@ -29,7 +29,7 @@ kubectl create -f deployments/kubernetes/k8s-replicaSet.yml
 http://192.168.99.100:30000/
 ```
 
-AWS ECS:
+**AWS ECS:**
 ```
 cd deployments/aws/ecs
 terraform init
