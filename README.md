@@ -1,16 +1,18 @@
 # assignment for interview
 
-Simple Go Calculator project with some math function:
+1. [Introduction](#intro) 
+2. [Run](#run) 
+3. [Deploy](#deploy) 
+4. [Usage](#usage) 
+5. [Continous Integration](#ci) 
+
+
+Simple Go Calculator project with some math function:<a name="intro"></a> 
 - Sum
 - Sqrt
 - Factorial
 - IsPrime
 - Log
-
-1. [Run](#run) 
-2. [Deploy](#deploy) 
-3. [Usage](#usage) 
-4. [Continous Integration](#ci) 
 
 ## RUN as exec or docker container <a name="run"></a> 
 
