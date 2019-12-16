@@ -7,66 +7,7 @@ Simple Go Calculator project with some math function:
 - IsPrime
 - Log
 
-Function IsPrime returns bool, according to provided number (is it prime or not).
-
-## USEAGE
-
-1.SUM 
-- (x int64, y int64)
-- http://localhost:8888/sum
-- JSON: {"num1":"2","num2":"4"}
-- curl: 
-```
-curl --location --request POST "http://localhost:8888/sum" \
---header "Content-Type: application/json" \
---data "{\"num1\":\"2\",
-\"num2\":\"4\"}"
-```
-
-2.SQRT 
-- (x float64)
-- http://localhost:8888/sqrt
-- JSON: {"number":"144"}
-- curl: 
-```
-curl --location --request POST "http://localhost:8888/sqrt" \
---header "Content-Type: application/json" \
---data "{\"number\":\"144\"}"
-```
-
-3.FACTORIAL 
-- (n uint64)
-- http://localhost:8888/factorial
-- JSON: {"number":"6"}
-- curl: 
-```
-curl --location --request POST "http://localhost:8888/factorial" \
---header "Content-Type: application/json" \
---data "{\"number\":\"6\"}"
-```
-4.ISPRIME 
-- (n int)
-- http://localhost:8888/isPrime
-- JSON: {"number":"6"}
-- curl: 
-```
-curl --location --request POST "http://localhost:8888/isPrime" \
---header "Content-Type: application/json" \
---data "{\"number\":\"6\"}"
-```
-
-5.LOG 
-- (n float64)
-- http://localhost:8888/log
-- JSON: {"number":"6"}
-- curl: 
-```
-curl --location --request POST "http://localhost:8888/log" \
---header "Content-Type: application/json" \
---data "{\"number\":\"6\"}"
-```
-
-## RUN
+## RUN as exec or docker container
 
 **Executable**
 ```
@@ -103,4 +44,59 @@ cd ../../../
 $(aws ecr get-login --no-include-email --region eu-west-1)
 docker build -t 311744426619.dkr.ecr.eu-west-1.amazonaws.com/go-calc:0.0.2 -f build/package/Dockerfile .
 docker push 311744426619.dkr.ecr.eu-west-1.amazonaws.com/go-calc:0.0.2
+```
+
+## USEAGE
+
+1.SUM 
+- (x int64, y int64)
+- http://localhost:8888/sum
+- JSON: {"num1":"2","num2":"4"}
+- curl: 
+```
+curl --location --request POST "http://localhost:8888/sum" \
+--header "Content-Type: application/json" \
+--data "{\"num1\":\"2\",
+\"num2\":\"4\"}"
+```
+2.SQRT 
+- (x float64)
+- http://localhost:8888/sqrt
+- JSON: {"number":"144"}
+- curl: 
+```
+curl --location --request POST "http://localhost:8888/sqrt" \
+--header "Content-Type: application/json" \
+--data "{\"number\":\"144\"}"
+```
+3.FACTORIAL 
+- (n uint64)
+- http://localhost:8888/factorial
+- JSON: {"number":"6"}
+- curl: 
+```
+curl --location --request POST "http://localhost:8888/factorial" \
+--header "Content-Type: application/json" \
+--data "{\"number\":\"6\"}"
+```
+4.ISPRIME 
+- (n int)
+- Function IsPrime returns bool, according to provided number (if it's prime or not).
+- http://localhost:8888/isPrime
+- JSON: {"number":"6"}
+- curl: 
+```
+curl --location --request POST "http://localhost:8888/isPrime" \
+--header "Content-Type: application/json" \
+--data "{\"number\":\"6\"}"
+```
+5.LOG 
+- (n float64)
+- http://localhost:8888/log
+- JSON: {"number":"6"}
+- curl: 
+```
+curl --location --request POST "http://localhost:8888/log" \
+--header "Content-Type: application/json" \
+--data "{\"number\":\"6\"}"
 ```
