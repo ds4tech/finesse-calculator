@@ -2,13 +2,15 @@
 
 Simple Go Calculator project with some math function:
 - Sum
-- Sqrt(x float64)
+- Sqrt
 - Factorial(n uint64)
 - IsPrime(n int)
 - Log(n float64)
 
 Function IsPrime returns bool, according to provided number (is it prime or not).
-**Use:**
+
+**Useage:**
+
 1.SUM 
 - (x int64, y int64)
 - http://localhost:8888/sum
@@ -19,6 +21,17 @@ curl --location --request POST "http://localhost:8888/sum" \
 --header "Content-Type: application/json" \
 --data "{\"num1\":\"2\",
 \"num2\":\"4\"}"
+```
+
+2.SQRT 
+- (x float64)
+- http://localhost:8888/sqrt
+- JSON: {"number":"144"}
+- curl: 
+```
+curl --location --request POST "http://localhost:8888/sum" \
+--header "Content-Type: application/json" \
+--data "{\"number\":\"144\"}"
 ```
 
 ## RUN
