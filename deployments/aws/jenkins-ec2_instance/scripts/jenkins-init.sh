@@ -24,17 +24,11 @@ mkdir -p /var/lib/jenkins
 echo '/dev/data/volume1 /var/lib/jenkins ext4 defaults 0 0' >> /etc/fstab
 mount /var/lib/jenkins
 
-# jenkins repository
+# jenkins and golang repository
 wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
 echo "deb http://pkg.jenkins.io/debian-stable binary/" >> /etc/apt/sources.list
+add-apt-repository ppa:longsleep/golang-backports -y
 apt-get update
-
-# install go lang
-apt-get install -y golang
-mkdir /var/lib/jenkins/go
-export GOPATH=/var/lib/jenkins/go
-go get github.com/gorilla/mux
-go get github.com/ds4tech/pipeline-calculator-ws/pkg
 
 # install dependencies
 apt-get install -y python3 openjdk-8-jre
@@ -59,7 +53,15 @@ wget -q https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_
 cd /usr/local/bin
 wget -q https://releases.hashicorp.com/packer/0.10.2/packer_0.10.2_linux_amd64.zip
 unzip packer_0.10.2_linux_amd64.zip
+rm packer_0.10.2_linux_amd64.zip
+
+# install go-lang
+apt-get install -y golang-go
+echo "export GOPATH=/var/lib/jenkins/go" >> /etc/profile
+mkdir /var/lib/jenkins/go
+chown jenkins.jenkins /var/lib/jenkins/go
+go get github.com/gorilla/mux
+go get github.com/ds4tech/pipeline-calculator-ws/pkg
+
 # clean up
 apt-get clean
-rm terraform_0.7.7_linux_amd64.zip
-rm packer_0.10.2_linux_amd64.zip
