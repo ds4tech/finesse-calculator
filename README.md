@@ -1,7 +1,7 @@
-# assignment for interview
+# Assignment for interview
 
 1. [Introduction](#intro) 
-2. [Run](#build) <br>
+2. [Build](#build) <br>
    2.1. [Exec](#build.exe) <br>
    2.2. [Docker](#build.docker) 
 3. [Deploy](#deploy) <br>
@@ -22,7 +22,7 @@ Simple Go Calculator project with some math function:<a name="intro"></a>
 
 ## BUILD as exec or docker container <a name="build"></a>
 
-**Executable** <a name="build.exe"></a>
+### Executable <a name="build.exe"></a>
 ```
 go build -o main cmd/calculator/handlers.go cmd/calculator/main.go
 ./main
