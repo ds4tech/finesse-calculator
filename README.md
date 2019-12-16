@@ -1,6 +1,14 @@
 # assignment for interview
 
-Simple Go Calculator project.
+Simple Go Calculator project with some math function:
+-Sum(x int64, y int64)
+-Sqrt(x float64)
+-Factorial(n uint64)
+-IsPrime(n int)
+-Log(n float64)
+
+Function IsPrime returns bool, whether provided number is prime or not.
+
 
 ## RUN
 
