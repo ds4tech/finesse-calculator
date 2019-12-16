@@ -42,13 +42,13 @@ terraform apply
 //copy output: repository url
 cd ../../../
 $(aws ecr get-login --no-include-email --region eu-west-1)
-docker build -t 311744426619.dkr.ecr.eu-west-1.amazonaws.com/go-calc:0.0.2 -f build/package/Dockerfile .
-docker push 311744426619.dkr.ecr.eu-west-1.amazonaws.com/go-calc:0.0.2
+docker build -t 311744426619.dkr.ecr.eu-west-1.amazonaws.com/go-calc:0.0.3 -f build/package/Dockerfile .
+docker push 311744426619.dkr.ecr.eu-west-1.amazonaws.com/go-calc:0.0.3
 ```
 
 ## USEAGE
 
-1.SUM 
+1. SUM 
 - (x int64, y int64)
 - http://localhost:8888/sum
 - JSON: {"num1":"2","num2":"4"}
@@ -59,7 +59,7 @@ curl --location --request POST "http://localhost:8888/sum" \
 --data "{\"num1\":\"2\",
 \"num2\":\"4\"}"
 ```
-2.SQRT 
+2. SQRT 
 - (x float64)
 - http://localhost:8888/sqrt
 - JSON: {"number":"144"}
@@ -69,7 +69,7 @@ curl --location --request POST "http://localhost:8888/sqrt" \
 --header "Content-Type: application/json" \
 --data "{\"number\":\"144\"}"
 ```
-3.FACTORIAL 
+3. FACTORIAL 
 - (n uint64)
 - http://localhost:8888/factorial
 - JSON: {"number":"6"}
@@ -79,7 +79,7 @@ curl --location --request POST "http://localhost:8888/factorial" \
 --header "Content-Type: application/json" \
 --data "{\"number\":\"6\"}"
 ```
-4.ISPRIME 
+4. ISPRIME 
 - (n int)
 - Function IsPrime returns bool, according to provided number (if it's prime or not).
 - http://localhost:8888/isPrime
@@ -90,7 +90,7 @@ curl --location --request POST "http://localhost:8888/isPrime" \
 --header "Content-Type: application/json" \
 --data "{\"number\":\"6\"}"
 ```
-5.LOG 
+5. LOG 
 - (n float64)
 - http://localhost:8888/log
 - JSON: {"number":"6"}
