@@ -20,7 +20,7 @@ Simple Go Calculator project with some math function:<a name="intro"></a>
 - IsPrime
 - Log
 
-## BUILD as exec or docker container <a name="build"></a>
+## BUILD <a name="build"></a>
 
 ### Executable <a name="build.exe"></a>
 ```
@@ -30,7 +30,7 @@ go build -o main cmd/calculator/handlers.go cmd/calculator/main.go
 http://localhost:8888/
 ```
 
-**Docker container** <a name="build.docker"></a>
+### Docker container <a name="build.docker"></a>
 ```
 docker build -t go-calc -f build/package/Dockerfile .
 docker run -d -p 80:8888 go-calc
@@ -40,14 +40,14 @@ http://localhost/
 
 ## DEPLOY <a name="deploy"></a> 
 
-**Kubernetes** <a name="deploy.k8s"></a>
+### Kubernetes <a name="deploy.k8s"></a>
 ```
 kubectl create -f deployments/kubernetes/k8s-replicaSet.yml
 
 http://192.168.99.100:30000/
 ```
 
-**AWS ECS:** <a name="deploy.ecs"></a>
+### AWS ECS <a name="deploy.ecs"></a>
 ```
 cd deployments/aws/ecs
 terraform init
