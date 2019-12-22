@@ -16,6 +16,8 @@ func HomeLink(w http.ResponseWriter, r *http.Request) {
 }
 
 func SumHandler(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("content-Type", "application/json; charset=UTF-8")
+	w.WriteHeader(http.StatusOK)
 	reqBody, err := ioutil.ReadAll(r.Body)
 	if err != nil {
 		fmt.Fprintf(w, "Kindly enter integer numbers")
@@ -36,6 +38,8 @@ func SumHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func SqrtHandler(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("content-Type", "application/json; charset=UTF-8")
+	w.WriteHeader(http.StatusOK)
 	reqBody, err := ioutil.ReadAll(r.Body)
 	if err != nil {
 		fmt.Fprintf(w, "Kindly enter integer number")
@@ -54,6 +58,8 @@ func SqrtHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func LogHandler(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("content-Type", "application/json; charset=UTF-8")
+	w.WriteHeader(http.StatusOK)
 	reqBody, err := ioutil.ReadAll(r.Body)
 	if err != nil {
 		fmt.Fprintf(w, "Kindly enter integer number")
@@ -72,6 +78,8 @@ func LogHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func FactorialHandler(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("content-Type", "application/json; charset=UTF-8")
+	w.WriteHeader(http.StatusOK)
 	reqBody, err := ioutil.ReadAll(r.Body)
 	if err != nil {
 		fmt.Fprintf(w, "Kindly enter integer number")
@@ -90,6 +98,8 @@ func FactorialHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func IsPrimeHandler(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("content-Type", "application/json; charset=UTF-8")
+	w.WriteHeader(http.StatusOK)
 	reqBody, err := ioutil.ReadAll(r.Body)
 	if err != nil {
 		fmt.Fprintf(w, "Kindly enter integer number")
