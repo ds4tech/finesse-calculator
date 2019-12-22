@@ -41,31 +41,31 @@ var routes = Routes{
 	Route{
 		"sumHandler",
 		"POST",
-		"/sum",
+		"/v1/sum",
 		SumHandler,
 	},
 	Route{
 		"sqrtHandler",
 		"POST",
-		"/sqrt",
+		"/v1/sqrt",
 		SqrtHandler,
 	},
 	Route{
 		"factorialHandler",
 		"POST",
-		"/factorial",
+		"/v1/factorial",
 		FactorialHandler,
 	},
 	Route{
 		"logHandler",
 		"POST",
-		"/log",
+		"/v1/log",
 		LogHandler,
 	},
 	Route{
 		"isPrimeHandler",
 		"POST",
-		"/isPrime",
+		"/v1/isPrime",
 		IsPrimeHandler,
 	},
 }
