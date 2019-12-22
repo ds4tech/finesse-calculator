@@ -11,11 +11,13 @@ import (
 )
 var dat map[string]interface{}
 
-func homeLink(w http.ResponseWriter, r *http.Request) {
+func HomeLink(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Welcome to Calculator!")
 }
 
-func sumHandler(w http.ResponseWriter, r *http.Request) {
+func SumHandler(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("content-Type", "application/json; charset=UTF-8")
+	w.WriteHeader(http.StatusOK)
 	reqBody, err := ioutil.ReadAll(r.Body)
 	if err != nil {
 		fmt.Fprintf(w, "Kindly enter integer numbers")
@@ -35,7 +37,9 @@ func sumHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func sqrtHandler(w http.ResponseWriter, r *http.Request) {
+func SqrtHandler(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("content-Type", "application/json; charset=UTF-8")
+	w.WriteHeader(http.StatusOK)
 	reqBody, err := ioutil.ReadAll(r.Body)
 	if err != nil {
 		fmt.Fprintf(w, "Kindly enter integer number")
@@ -52,7 +56,10 @@ func sqrtHandler(w http.ResponseWriter, r *http.Request) {
     fmt.Printf("Sqrt of %v is: %v\n", num, result)
 	}
 }
-func logHandler(w http.ResponseWriter, r *http.Request) {
+
+func LogHandler(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("content-Type", "application/json; charset=UTF-8")
+	w.WriteHeader(http.StatusOK)
 	reqBody, err := ioutil.ReadAll(r.Body)
 	if err != nil {
 		fmt.Fprintf(w, "Kindly enter integer number")
@@ -66,10 +73,13 @@ func logHandler(w http.ResponseWriter, r *http.Request) {
     jsonMap := map[string]float64{"result": result}
     jsonResult, _ := json.Marshal(jsonMap)
 		fmt.Fprintf(w, string(jsonResult))
-    fmt.Printf("Ln of %v is: %v\n", num, result)
+    fmt.Printf("Log of %v is: %v\n", num, result)
 	}
 }
-func factorialHandler(w http.ResponseWriter, r *http.Request) {
+
+func FactorialHandler(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("content-Type", "application/json; charset=UTF-8")
+	w.WriteHeader(http.StatusOK)
 	reqBody, err := ioutil.ReadAll(r.Body)
 	if err != nil {
 		fmt.Fprintf(w, "Kindly enter integer number")
@@ -86,7 +96,10 @@ func factorialHandler(w http.ResponseWriter, r *http.Request) {
     fmt.Printf("Factorial of %v is: %v\n", num, result)
 	}
 }
-func isPrimeHandler(w http.ResponseWriter, r *http.Request) {
+
+func IsPrimeHandler(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("content-Type", "application/json; charset=UTF-8")
+	w.WriteHeader(http.StatusOK)
 	reqBody, err := ioutil.ReadAll(r.Body)
 	if err != nil {
 		fmt.Fprintf(w, "Kindly enter integer number")
