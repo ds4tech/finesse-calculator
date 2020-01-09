@@ -24,7 +24,7 @@ Simple Go Calculator project with some math function:<a name="intro"></a>
 
 ### Executable <a name="build.exe"></a>
 ```
-go build -o main cmd/calculator/handlers.go cmd/calculator/main.go
+go build -o main cmd/calculator/main.go
 ./main
 
 http://localhost:8888/
