@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/ds4tech/pipeline-calculator-ws/pkg"
+	"github.com/ds4tech/simple-calculator/pkg"
 )
 
 
