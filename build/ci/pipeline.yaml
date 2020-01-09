@@ -31,7 +31,7 @@ pipeline {
         println "[INFO]..........Unit tests.............."
         script {
           dir("pkg") {
-               sh 'set -x; go test'
+               sh "set -x; ./${project_name} ; go test"
           }
         }
       }

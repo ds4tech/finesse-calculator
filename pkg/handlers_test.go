@@ -12,8 +12,8 @@ import (
 )
 
 func TestSqrtHandler(t *testing.T) {
-	//var links []string
 /*
+	var links []string
 	links := [...]string{"http://localhost:8888/v1/sqrt"}
 	start := time.Now()
 	ch := make(chan string)
@@ -26,6 +26,7 @@ func TestSqrtHandler(t *testing.T) {
 	fmt.Printf("%.2fs elapsed\n", time.Since(start).Seconds())
 */
 
+/* in order to test handler, service must be started first */
 	url := "http://localhost:8888/v1/sqrt"
 	payload := strings.NewReader("{\"number\":\"9\"}\n")
 	req, _ := http.NewRequest("POST", url, payload)
