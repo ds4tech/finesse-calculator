@@ -26,24 +26,30 @@ pipeline {
       }
     }
 
-    stage("Launch ${project_name}") {
+    stage('Launch application') {
       steps {
        script{
           withEnv(['JENKINS_NODE_COOKIE=dontkill']) {
             sh "./${project_name} &"
            }
        }
+       println "[INFO]..........Application started.............."
      }
     }
 
     stage('Run Unit tests') {
       steps {
-        println "[INFO]..........Unit tests.............."
+        println "[INFO]..........Run unit tests.............."
         script {
           dir("pkg") {
                sh "set -x; go test"
           }
+             sh """
+              set -x;
+              kill \$(ps aux | grep ${project_name} | head -n 1 | awk '{print \$2}')
+             """
         }
+        println "[INFO]..........Application stopped.............."
       }
      }
 
@@ -53,7 +59,7 @@ pipeline {
       println "[INFO]..........Push to articaftory.............."
 
       script {
-             sh "set -x; tar -cvf ${project_name}-${env.BUILD_NUMBER}.tar.gz *; ls"
+             sh "set -x; tar -cvf ${project_name}-${env.BUILD_NUMBER}.tar.gz *"
              }
       }
      }
