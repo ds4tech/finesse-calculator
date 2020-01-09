@@ -13,7 +13,7 @@ pipeline {
      println "[INFO]...........................................................................................\
             \n[INFO].. Pipeline for automating build of calculator miscroservice..\
             \n[INFO]..........................................................................................."
-     git([url: 'https://github.com/ds4tech/simple-calculator.git', branch: 'master'])
+     git([url: 'https://github.com/ds4tech/simple-calculator.git', branch: 'develop'])
      }
     }
 
