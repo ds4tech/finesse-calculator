@@ -1,5 +1,5 @@
 
-def project_name = "calculatorGo"
+def project_name = "simpleCalculator"
 
 pipeline {
  agent {
@@ -21,17 +21,27 @@ pipeline {
       steps {
         println "[INFO]..........Build.............."
         script {
-             sh "set -x; go build -o ${project_name} cmd/calculator/*;"
+             sh "set -x; go build -o ${project_name} cmd/calculator/main.go"
         }
       }
+    }
+
+    stage("Launch ${project_name}") {
+      steps {
+       script{
+          withEnv(['JENKINS_NODE_COOKIE=dontkill']) {
+            sh "./${project_name} &"
+           }
+       }
      }
+    }
 
     stage('Run Unit tests') {
       steps {
         println "[INFO]..........Unit tests.............."
         script {
           dir("pkg") {
-               sh "set -x; ./${project_name} ; go test"
+               sh "set -x; go test"
           }
         }
       }
