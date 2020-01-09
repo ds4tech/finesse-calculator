@@ -5,7 +5,7 @@ go:
 
 git:
   depth: 1
-  
+
 script:
- - go run cmd/calculator/main.go
+# - go run cmd/calculator/main.go
  - go test -v ./pkg
