@@ -1,4 +1,4 @@
-module github.com/ds4tech/pipeline-calculator-ws
+module github.com/ds4tech/simple-calculator
 
 go 1.13
 

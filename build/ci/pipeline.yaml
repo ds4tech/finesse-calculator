@@ -13,7 +13,7 @@ pipeline {
      println "[INFO]...........................................................................................\
             \n[INFO].. Pipeline for automating build of calculator miscroservice..\
             \n[INFO]..........................................................................................."
-     git([url: 'https://github.com/ds4tech/pipeline-calculator-ws.git', branch: 'master'])
+     git([url: 'https://github.com/ds4tech/simple-calculator.git', branch: 'master'])
      }
     }
 
@@ -31,7 +31,7 @@ pipeline {
         println "[INFO]..........Unit tests.............."
         script {
           dir("pkg") {
-               sh 'set -x; go test'
+               sh "set -x; ./${project_name} ; go test"
           }
         }
       }

@@ -1,5 +1,5 @@
 tmp
-calcWs
+main
 pipeline-calculator-ws
 calculator_ws/calculator_ws
 deployments/aws/jenkins-ec2_instance/terraform.tfstate

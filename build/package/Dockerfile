@@ -13,7 +13,7 @@ COPY . .
 #RUN go mod download
 
 # Build the Go app
-RUN go build -o main cmd/calculator/handlers.go cmd/calculator/main.go
+RUN go build -o main cmd/calculator/main.go
 
 # Expose port 8888 to the outside world
 EXPOSE 8888
