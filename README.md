@@ -1,4 +1,4 @@
-# Assignment for interview
+# Simple calculator application written in Go lang. The purpose is to demonstrate variety of ways for CICD.
 
 1. [Introduction](#intro)
 2. [Build](#build) <br>
