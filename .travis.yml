@@ -7,4 +7,6 @@ git:
   depth: 1
   
 script:
+ - go build -o main cmd/calculator/main.go
+ - ../main
  - go test -v ./pkg
