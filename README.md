@@ -1,4 +1,4 @@
-# Assignment for interview
+# Simple calculator application written in Go lang. The purpose is to demonstrate variety of ways for CICD.
 
 1. [Introduction](#intro)
 2. [Build](#build) <br>
@@ -24,7 +24,7 @@ Simple Go Calculator project with some math function:<a name="intro"></a>
 
 ### Executable <a name="build.exe"></a>
 ```
-go build -o main cmd/calculator/handlers.go cmd/calculator/main.go
+go build -o main cmd/calculator/main.go
 ./main
 
 http://localhost:8888/
