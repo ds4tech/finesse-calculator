@@ -47,19 +47,6 @@ kubectl create -f deployments/kubernetes/k8s-replicaSet.yml
 http://192.168.99.100:30000/
 ```
 
-### AWS ECS <a name="deploy.ecs"></a>
-```
-cd deployments/aws/ecs
-terraform init
-terraform apply
-//copy output: repository url
-cd ../../../
-$(aws ecr get-login --no-include-email --region eu-west-1)
-docker build -t go-calc .
-docker tag go-calc:latest 311744426619.dkr.ecr.eu-west-1.amazonaws.com/go-calc:latest
-docker push 311744426619.dkr.ecr.eu-west-1.amazonaws.com/go-calc:latest
-```
-
 ## USEAGE <a name="usage"></a>
 
 1. SUM
@@ -114,6 +101,3 @@ curl --location --request POST "http://localhost:8888/log" \
 --header "Content-Type: application/json" \
 --data "{\"number\":\"6\"}"
 ```
-## Continous Integration <a name="ci"></a>
-Pipeline script written in Groovy is placed in [build/ci directory](https://github.com/ds4tech/pipeline-calculator-ws/blob/master/build/ci/pipeline.yaml). It is dedicated for Jenkins Pipeline JOB. <br>
-To run Jenkins on AWS, run terraform scripts in deployments/aws/jenkins-ec2_instance
