@@ -6,7 +6,6 @@
    2.2. [Docker](#build.docker)
 3. [Deploy](#deploy) <br>
  3.1. [Kubernetes](#deploy.k8s) <br>
- 3.2. [AWS ECS](#deploy.ecs)
 4. [Usage](#usage)
 5. [Continous Integration](#ci)
 
@@ -51,53 +50,52 @@ http://192.168.99.100:30000/
 
 1. SUM
 - (x int64, y int64)
-- http://localhost:8888/sum
+- http://localhost:8888/v1/sum
 - JSON: {"num1":"2","num2":"4"}
 - curl:
 ```
-curl --location --request POST "http://localhost:8888/sum" \
+curl --location --request POST "http://localhost:8888/v1/sum" \
 --header "Content-Type: application/json" \
---data "{\"num1\":\"2\",
-\"num2\":\"4\"}"
+--data "{\"num1\":\"2\", \"num2\":\"4\"}"
 ```
 2. SQRT
 - (x float64)
-- http://localhost:8888/sqrt
+- http://localhost:8888/v1/sqrt
 - JSON: {"number":"144"}
 - curl:
 ```
-curl --location --request POST "http://localhost:8888/sqrt" \
+curl --location --request POST "http://localhost:8888/v1/sqrt" \
 --header "Content-Type: application/json" \
 --data "{\"number\":\"144\"}"
 ```
 3. FACTORIAL
 - (n uint64)
-- http://localhost:8888/factorial
+- http://localhost:8888/v1/factorial
 - JSON: {"number":"6"}
 - curl:
 ```
-curl --location --request POST "http://localhost:8888/factorial" \
+curl --location --request POST "http://localhost:8888/v1/factorial" \
 --header "Content-Type: application/json" \
 --data "{\"number\":\"6\"}"
 ```
 4. ISPRIME
 - (n int)
 - Function IsPrime returns bool, according to provided number (if it's prime or not).
-- http://localhost:8888/isPrime
+- http://localhost:8888/v1/isPrime
 - JSON: {"number":"6"}
 - curl:
 ```
-curl --location --request POST "http://localhost:8888/isPrime" \
+curl --location --request POST "http://localhost:8888/v1/isPrime" \
 --header "Content-Type: application/json" \
 --data "{\"number\":\"6\"}"
 ```
 5. LOG
 - (n float64)
-- http://localhost:8888/log
+- http://localhost:8888/v1/log
 - JSON: {"number":"6"}
 - curl:
 ```
-curl --location --request POST "http://localhost:8888/log" \
+curl --location --request POST "http://localhost:8888/v1/log" \
 --header "Content-Type: application/json" \
 --data "{\"number\":\"6\"}"
 ```
