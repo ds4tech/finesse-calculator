@@ -5,9 +5,8 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/ds4tech/simple-calculator/pkg"
+	"github.com/ds4tech/finesse-calculator/calc"
 )
-
 
 func main() {
 	fmt.Println("Starting server...\n")
